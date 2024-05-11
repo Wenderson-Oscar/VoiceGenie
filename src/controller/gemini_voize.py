@@ -39,10 +39,10 @@ class GeminiVoice:
                         print("Você disse:", text)
                     except sr.UnknownValueError:
                         print("Não entendi o que você disse.")
-                        text = ""
+                        text = "Houve um problema no reconhecimento de voz, verifique o Micro-fone"
                     except sr.RequestError as e:
                         print("Erro ao acessar o serviço de reconhecimento de voz:", e)
-                        text = ""
+                        text = "Houve um problema no reconhecimento de voz, verifique o Micro-fone"
             if text.lower() == "desligar":
                 break
             response = self.convo.get_ia_response()
